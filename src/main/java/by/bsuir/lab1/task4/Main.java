@@ -9,10 +9,10 @@ public class Main {
 
     public static void printIndexesOfPrimeElements(int[] arr) {
         boolean hasPrimeElements = false;
-        for (int i = 0; i < arr.length; i++)
-            if (isPrime(arr[i])) {
+        for (int i : arr)
+            if (isPrime(i)) {
                 hasPrimeElements = true;
-                System.out.println(arr[i]);
+                System.out.println(i);
             }
         if (!hasPrimeElements)
             System.out.println("No prime elements in your array");
