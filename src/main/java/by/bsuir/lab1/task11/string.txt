@@ -1,0 +1,2 @@
+cd out/artifacts/JavaWT_jar
+java -jar JavaWT.jar
