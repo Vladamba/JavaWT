@@ -2,20 +2,23 @@ package by.bsuir.lab1.task4;
 
 public class Main {
     public static void main(String[] args) {
-        //final int N = 5;
         int[] myArray = {1, 2, 4, 7, 10};
-        printIndexesOfPrimeElements(myArray);
+        boolean[] result = getIndexesOfPrimeElements(myArray);
+        for (int i = 0; i < result.length; i++) {
+            System.out.println(result[i]);
+        }
     }
 
-    public static void printIndexesOfPrimeElements(int[] arr) {
-        boolean hasPrimeElements = false;
-        for (int i : arr)
-            if (isPrime(i)) {
-                hasPrimeElements = true;
-                System.out.println(i);
+    public static boolean[] getIndexesOfPrimeElements(int[] arr) {
+        boolean[] result = new boolean[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            if (isPrime(arr[i])) {
+                result[i] = true;
+            } else {
+                result[i] = false;
             }
-        if (!hasPrimeElements)
-            System.out.println("No prime elements in your array");
+        }
+        return result;
     }
 
     public static boolean isPrime(int x) {

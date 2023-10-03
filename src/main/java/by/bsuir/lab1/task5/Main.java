@@ -2,7 +2,6 @@ package by.bsuir.lab1.task5;
 
 public class Main {
     public static void main(String[] args) {
-        //int[] myArray = {5, 7, -1, 0, 3, 2, 4, 8};
         int[] myArray = {5, 10, 6, 12, 3, 24, 7, 8};
         System.out.println(kElements(myArray));
     }
