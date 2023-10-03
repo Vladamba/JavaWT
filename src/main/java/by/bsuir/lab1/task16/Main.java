@@ -14,7 +14,6 @@ public class Main {
         Comparator<Book> authorTitleComparator = new AuthorComparator().thenComparing(new TitleComparator());
         Comparator<Book> authorTitlePriceComparator = new AuthorComparator().thenComparing(new TitleComparator().thenComparing(new PriceComparator()));
 
-
         Arrays.sort(arr, titleComparator);
         System.out.println(Arrays.toString(arr));
     }
