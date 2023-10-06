@@ -3,10 +3,9 @@ import java.util.Arrays;
 public class Main {
     public static void main(String [] args){
         double[] myArray ={5.1, 10, 6, 12.5, 3, 24, 7, 8};
-        shellSort(myArray);
-        System.out.println(Arrays.toString(myArray));
+        System.out.println(Arrays.toString(shellSort(myArray)));
     }
-    public static void shellSort(double[] arr) {
+    public static double[] shellSort(double[] arr) {
         int h = 1;
         while (h <= arr.length / 3) {
             h = h * 3 + 1;
@@ -23,5 +22,6 @@ public class Main {
             }
             h = (h - 1) / 3;
         }
+        return arr;
     }
 }

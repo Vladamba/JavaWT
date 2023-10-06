@@ -1,13 +1,16 @@
 package by.bsuir.lab1.task8;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        printIndexes(new double[]{1, 2, 3, 4, 5, 6}, new double[]{0, 4, 6, 8, 9, 10});
+        System.out.println(Arrays.toString(getIndexes(new double[]{1, 2, 3, 4, 5, 6}, new double[]{0, 4, 6, 8, 9, 10})));
     }
-    public static void printIndexes(double[] arr1, double[] arr2) {
+    public static int[] getIndexes(double[] arr1, double[] arr2) {
+        int[] result = new int[arr2.length];
         for (int i = 0; i < arr2.length; i++) {
-            System.out.println(binarySearch(arr1, 0, arr1.length - 1, arr2[i]));
+            result[i] = binarySearch(arr1, 0, arr1.length - 1, arr2[i]);
         }
+        return result;
     }
 
     static int binarySearch(double[] arr, int leftBorder, int rightBorder, double element) {

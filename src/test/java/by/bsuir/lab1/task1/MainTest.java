@@ -19,6 +19,6 @@ public class MainTest {
     public void testCalculate()
     {
         double result = 5.278937142696228;
-        Assert.assertEquals(result, Main.calculate(x, y), delta);
+        Assert.assertEquals(result, Main.calculate(x, y), delta); //assertArrayEquals
     }
 }

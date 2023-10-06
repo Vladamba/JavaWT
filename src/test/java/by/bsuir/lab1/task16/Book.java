@@ -1,4 +1,4 @@
-package by.bsuir.lab1.task14;
+package by.bsuir.lab1.task16;
 
 public class Book {
     private String title;
@@ -12,6 +12,17 @@ public class Book {
         this.price = price;
     }
 
+    public String getTitle() {
+        return this.title;
+    }
+
+    public String getAuthor() {
+        return this.author;
+    }
+
+    public int getPrice() {
+        return this.price;
+    }
     @Override
     public boolean equals(Object obj) {
         if (!(obj instanceof Book book) || obj.hashCode() != hashCode()) {
@@ -30,12 +41,5 @@ public class Book {
     @Override
     public String toString() {
         return "Title: " + title + "\nAuthor: " + author + "\nPrice: " + price + "\nEdition: " + edition + "\n";
-    }
-
-    @Override
-    public Book clone()
-    {
-        Book book = new Book(this.title, this.author, this.price);
-        return book;
     }
 }
